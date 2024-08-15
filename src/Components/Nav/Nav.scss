@@ -1,0 +1,325 @@
+.nav {
+    padding: 32px 0;
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: .3s;
+
+    &_card_left {
+        display: flex;
+        align-items: center;
+        column-gap: 64px;
+
+        @include media(1450px) {
+            column-gap: 54px;
+
+        }
+
+        @include media(1380px) {
+            column-gap: 44px;
+        }
+
+        @include media(1340px) {
+            column-gap: 34px;
+        }
+    }
+
+    &_menu {
+        display: none;
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+        color: white;
+
+        @include media(1200px) {
+            display: block;
+            order: 1;
+        }
+    }
+
+    &_logo {
+        width: 220px;
+
+        @include media(1450px) {
+            width: 200px;
+        }
+
+        @include media(1380px) {
+            width: 180px;
+        }
+
+        @include media(800px) {
+            width: 160px;
+        }
+
+        @include media(600px) {
+            width: 140px;
+        }
+    }
+
+    &_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // position: relative;
+
+
+    }
+
+    &_list {
+        display: flex;
+        list-style: none;
+        gap: 32px;
+
+        @include media(1450px) {
+            gap: 30px;
+        }
+
+        @include media(1200px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+
+            &_menu {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(-150%);
+                width: 100%;
+                background: var(--brwn2);
+                padding-top: 30px;
+                height: 100vh;
+                transition: .5s;
+                &.active {
+                    transform: translateY(0);
+
+                }
+            }
+        }
+
+        &_card {
+            display: none;
+
+            @include media (1200px) {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+            }
+        }
+    }
+
+    &_link {
+        text-decoration: none;
+        font-family: "Golos Text", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        color: white;
+        transition: .3s;
+        &:hover{
+            color: #C0C0C0;
+        }
+    }
+
+    &_card_right {
+        display: flex;
+        gap: 32px;
+
+        @include media(1200px) {
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+        }
+    }
+
+    &_contact {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+
+        &_text {
+            font-family: "Golos Text", sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 24px;
+            text-decoration: none;
+            color: white;
+
+            @include media(1450px) {
+                font-size: 22px;
+            }
+
+            @include media(1350px) {
+                margin-right: 15px;
+            }
+
+            @include media(1000px) {
+                font-size: 20px;
+            }
+
+            @include media(800px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &_phone_icon {
+        color: white;
+        width: 32px;
+        height: 32px;
+
+        @include media(1450px) {
+            width: 30px;
+            height: 30px;
+        }
+
+        @include media(1000px) {
+            width: 28px;
+            height: 28px;
+        }
+
+        @include media(800px) {
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    &_download {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+
+        @include media (1200px){
+            flex-direction: column;
+            gap: 10px;
+        }
+
+
+        &_card {
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+        }
+
+        &_text1 {
+            font-family: "Golos Text", sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: white;
+
+            @include media(1200px) {
+                text-align: center;
+            }
+        }
+
+        &_text2 {
+            font-family: "Golos Text", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            color: #C0C0C0;
+        }
+    }
+
+
+    &_close,
+    &_menu_logo {
+        // display: none;
+        display: block;
+        width: 30px;
+        height: 30px;
+        color: white;
+
+    }
+    &_close{
+        background-color: #fff;
+        color: var(--brwn2);
+        padding: 5px;
+        height: 32px;
+        width: 32px;
+        border-radius: 8px;
+    }
+    &_icons {
+        display: flex;
+        gap: 4px;
+
+        display: none;
+
+        @include media(1200px){
+            display: flex;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        &_card {
+            padding: 8px 16px;
+            background: var(--brwn1);
+            border-radius: 8px;
+        }
+
+        &_icon {
+            font-size: 25px;
+            color: white;
+        }
+    }
+
+    &_social {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &_text {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #58699E;
+            font-family: "Golos Text", sans-serif;
+            font-size: 8px;
+            font-weight: 600;
+            line-height: 9.6px;
+            text-align: center;
+            color: white;
+            border-radius: 50%;
+        }
+
+    }
+
+    &_globe {
+        width: 20px;
+        height: 20px;
+    }
+
+    &_phone {
+        width: 20px;
+        height: 20px;
+    }
+
+
+}
+
+
+.menu{
+    display: none;
+    
+    @include media (1200px) {
+        display: flex;
+        margin-top: 26px;
+    }
+}
+.download{
+    @include media(1410px) {
+        display: none;
+    }
+}

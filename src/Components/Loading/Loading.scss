@@ -1,0 +1,140 @@
+.lds-ring,
+.lds-ring div {
+    box-sizing: border-box;
+    color: white;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+
+    @include media (1200px) {
+        width: 55px;
+        height: 55px;
+    }
+
+    @include media (1000px) {
+        width: 50px;
+        height: 50px;
+    }
+
+    @include media (700px) {
+        width: 45px;
+        height: 45px;
+    }
+
+    @include media (500px) {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 8px;
+    border: 8px solid currentColor;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: currentColor transparent transparent transparent;
+
+    @include media (1200px) {
+        border: 6px solid currentColor;
+        border-color: currentColor transparent transparent transparent;
+    }
+
+    @include media (1000px) {
+        border: 6px solid currentColor;
+        border-color: currentColor transparent transparent transparent;
+    }
+
+    @include media (700px) {
+        border: 5px solid currentColor;
+        border-color: currentColor transparent transparent transparent;
+    }
+
+    @include media (500px) {
+        border: 4px solid currentColor;
+        border-color: currentColor transparent transparent transparent;
+    }
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    background: var(--brwn1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    @media (min-width: 1000px) and (max-width: 1600px) {
+        transform: scale(1.25);
+        transform-origin: top left;
+        width: 80%;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+
+
+    &_card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+
+        @include media (700px) {
+            gap: 20px;
+
+        }
+    }
+
+    img {
+
+        @include media (1400px) {
+            width: 500px;
+        }
+
+        @include media (1200px) {
+            width: 400px;
+        }
+
+        @include media (1000px) {
+            width: 300px;
+        }
+
+        @include media (700px) {
+            width: 250px;
+        }
+
+        @include media (500px) {
+            width: 200px;
+        }
+    }
+}

@@ -1,0 +1,398 @@
+.main-carousel {
+    position: relative;
+    font-size: 30px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+
+
+}
+
+
+
+.main-carousel .carousel {
+    width: 100%;
+}
+
+.main-carousel .carousel .items {
+    width: 100%;
+
+}
+
+.main-carousel .carousel .items .carousel-image {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: 0.8s all;
+    height: 100vh;
+
+
+
+
+}
+
+.main-carousel .carousel .items .current {
+    opacity: 1;
+}
+
+.buttons {
+    display: none;
+}
+
+.main-carousel .nav-dots {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 99;
+}
+
+.main-carousel .nav-dots .dot {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.main-carousel .nav-dots .active {
+    opacity: 1;
+}
+
+.img_card img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    transform: scale(1.2);
+    display: block;
+}
+
+.img_text {
+    top: 0px !important;
+    position: absolute;
+    color: white;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.slidet_text {
+    max-width: 900px;
+    width: 100%;
+
+    @include media (1550px) {
+        max-width: 800px;
+
+    }
+
+    @include media (600px) {
+        max-width: 100%;
+        width: 340px;
+    }
+}
+
+
+
+.img_text h3 {
+    width: 100%;
+    font-family: 'Golos Text', sans-serif;
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 86.4px;
+    text-align: left;
+
+
+    @media (max-width:1550px) {
+        font-size: 58px;
+        line-height: 130%;
+    }
+
+    @media (max-width:1100px) {
+        font-size: 50px;
+    }
+
+    @media (max-width:1000px) {
+        font-size: 45px;
+        line-height: 120%;
+    }
+
+    @media (max-width:900px) {
+        font-size: 40px;
+    }
+
+    @media (max-width:800px) {
+        font-size: 35px;
+    }
+
+    @media (max-width:700px) {
+        font-size: 30px;
+    }
+
+    @media (max-width:600px) {
+        font-size: 26px;
+    }
+
+    @media (max-width:550px) {
+        font-size: 24px;
+        line-height: 110%;
+    }
+
+}
+
+.img_text .slidet_text2 {
+    font-family: 'Golos Text', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    max-width: 754px;
+    width: 100%;
+    margin-top: 15px;
+
+    @media (max-width:1200px) {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    @media (max-width:1100px) {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    @media (max-width:1000px) {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    @media (max-width:900px) {
+        font-size: 16px;
+    }
+
+    @media (max-width:800px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.upcoming {
+    &_box {
+        display: flex;
+        margin-bottom: 120px;
+        // justify-content: space-between;
+        align-items: end;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @include media(1300px) {
+            margin-bottom: 100px;
+            flex-wrap: wrap;
+
+
+        }
+
+        @include media(1000px) {
+            margin-bottom: 80px;
+        }
+
+        @media (max-width:800px) {
+            align-items: end;
+        }
+
+        @media (max-width:700px) {
+            margin-bottom: 60px;
+        }
+
+        @media (max-width:600px) {
+            margin-bottom: 50px;
+        }
+
+        @media (max-width:500px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width:400px) {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &_card {
+        width: 70%;
+
+        @media (max-width:550px) {
+            margin-right: 5%;
+            width: 80%;
+        }
+    }
+
+    &_icons {
+        display: flex;
+        gap: 10px;
+        align-items: flex-end;
+
+        @include media(1300px) {
+            flex-direction: column-reverse;
+            width: 30%;
+
+        }
+
+        @include media(800px) {
+            width: 30%;
+            justify-content: flex-end;
+        }
+
+        @include media(550px) {
+            width: 15%;
+            justify-content: flex-end;
+        }
+
+    }
+
+    &_icon2_card {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 10px;
+
+        @include media(1299px) {
+            order: +1;
+            width: 100%;
+            margin-top: 10px;
+            margin-right: 0px;
+        }
+
+        @include media(800px) {
+            width: 100%;
+            margin-top: 10px;
+            margin-right: 0px;
+
+        }
+    }
+
+    &_icons_card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+    &_icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: var(--brwn1);
+        font-family: 'Golos Text', sans-serif;
+        font-size: 12.6px;
+        font-weight: 600;
+        line-height: 15.12px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 3;
+
+        @include media(900px) {
+            width: 50px;
+            height: 50px;
+            font-size: 10px;
+        }
+
+        @include media(700px) {
+            width: 45px;
+            height: 45px;
+            font-size: 10px;
+        }
+
+        &:hover {
+            background: white;
+            color: var(--brwn1);
+        }
+    }
+
+    &_phone {
+        font-size: 28px;
+
+        @include media(700px) {
+            font-size: 24px;
+        }
+    }
+
+    &_globe {
+        font-size: 26px;
+
+        @include media(700px) {
+            font-size: 20px;
+        }
+    }
+
+    &_icon2 {
+        width: 253px;
+        background: var(--brwn1);
+        padding: 16px 24px;
+        border-radius: 40px;
+        font-family: 'Golos Text', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: right;
+        transition: .3s;
+        z-index: 3;
+
+        @include media(900px) {
+            width: 219px;
+            font-size: 15px;
+            padding: 14px 24px;
+        }
+
+        @include media(700px) {
+            width: 185px;
+            font-size: 12px;
+            padding: 12px 24px;
+        }
+
+        &:hover {
+            background: white;
+            color: var(--brwn1);
+        }
+    }
+}
+
+.main-carousel,
+.main-carousel .carousel .items .carousel-image,
+.img_card img {
+    @media (max-width:1600px) {
+        height: 125vh ;
+    }
+
+    @media (max-width:1200px) {
+        height: 90vh;
+    }
+
+    @media (max-width:1100px) {
+        height: 900px;
+    }
+    @media (max-width:1000px) {
+        height: 765px;
+    }
+    @media (max-width:900px) {
+        height: 650px;
+    }
+    @media (max-width:600px) {
+        height: 600px;
+    }
+}

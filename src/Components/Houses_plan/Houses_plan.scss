@@ -1,0 +1,118 @@
+.houses {
+
+
+
+    &_title {
+        font-family: "Golos Text", sans-serif;
+        font-size: 48px;
+        font-weight: 600;
+        color: var(--brwn2);
+        line-height: 56px;
+        @include media(1670px) {
+            font-size: 44px;
+            line-height: 52px;
+        }
+        @include media(1400px) {
+            font-size: 40px;
+            line-height: 48px;
+        }
+        @include media(1200px) {
+            font-size: 36px;
+            line-height: 44px;
+        }
+        @include media(1000px) {
+            font-size: 30px;
+            line-height: 38px;
+        }
+        @include media(800px) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    &_card_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include media(1050px) {
+            flex-direction: column;
+            align-items: start;
+            row-gap: 20px;
+        }
+    }
+    &_border {
+        border: 1px solid #dcdcdc;
+    }
+    &_card_number {
+        display: flex;
+        background: var(--brwn3);
+        border-radius: 32px;
+        @include media(650px) {
+            overflow-x: scroll;
+            width: 100%;
+        }
+    }
+    &_number {
+        padding: 12px 24px;
+        font-family: "Golos Text", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        text-align: center;
+        transition: 0.2s;
+        cursor: pointer;
+        &.active {
+            background-color: var(--brwn2);
+            border-radius: 32px;
+            color: white;
+        }
+        @include media(1670px) {
+            font-size: 22px;
+            line-height: 30px;
+        }
+        @include media(1400px) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        @include media(1200px) {
+            font-size: 18px;
+            line-height: 26px;
+            padding: 10px 22px;
+        }
+        @include media(1000px) {
+            font-size: 16px;
+            line-height: 24px;
+            flex-shrink: 0;
+        }
+    }
+    &_number:hover {
+        background-color: var(--brwn1);
+        border-radius: 32px;
+        color: white;
+    }
+
+    &_card_bottom,
+    &_card_bottom1,
+    &_card_bottom2 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+        height: fit-content;
+
+        @include media(800px) {
+            overflow-x: scroll;
+            margin-top: 40px;
+            gap: 24px;
+        }
+    }
+    &_img {
+        width: 30%;
+        object-fit: cover;
+        flex-shrink: 0;
+
+        @include media(800px) {
+            width:343px;
+        }
+    }
+}

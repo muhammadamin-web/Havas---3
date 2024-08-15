@@ -1,0 +1,71 @@
+.construction {
+ 
+
+
+    &_box {
+        gap: 24px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 45px;
+
+        @include media(760px) {
+            grid-template-columns: repeat(2, 1fr);
+            padding-top: 35px;
+        }
+        @include media(450px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @include media(800px) {
+            padding-top: 40px;
+        }
+        @include media(600px) {
+            padding-top: 14px;
+        }
+    }
+
+    &_title {
+        font-family: "Golos Text", sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 48px;
+        text-align: left;
+        color: var(--brwn2);
+
+        @include media(1200px) {
+            font-size: 35px;
+        }
+        @include media(1000px) {
+            font-size: 30px;
+        }
+        @include media(800px) {
+            font-size: 25px;
+        }
+    }
+    &_text {
+        font-family: "Golos Text", sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        text-align: left;
+        @include media(1200px) {
+            font-size: 22px;
+        }
+        @include media(1000px) {
+            font-size: 20px;
+        }
+        @include media(800px) {
+            font-size: 18px;
+        }
+        @include media(600px) {
+            font-size: 16px;
+        }
+    }
+    &_card {
+        width: 100%;
+
+        img {
+            width: 100%;
+            border-radius: 16px;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.average {
+    width: 100%;
+    height: 100%;
+    position: relative;
+ 
+ 
+
+    &_card {
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 100%);
+        height: 90vh;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include media(550px) {
+            height: 400px;
+        }
+    }
+    img {
+        width: 100%;
+        z-index: -1;
+        display: block;
+        height: 90vh;
+        object-fit: cover;
+        @include media(550px) {
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+
+    &_title {
+        font-family: "Golos Text", sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 56px;
+        text-align: left;
+        position: absolute;
+        top: 64px;
+        color: white;
+
+        @include media(1200px) {
+            font-size: 35px;
+            line-height: 45px;
+            top: 50px;
+        }
+        @include media(1000px) {
+            font-size: 30px;
+            line-height: 40px;
+            top: 35px;
+        }
+        @include media(800px) {
+            font-size: 24px;
+            line-height: 32px;
+            top: 20px;
+        }
+    }
+}

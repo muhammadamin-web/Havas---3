@@ -1,0 +1,334 @@
+.about {
+    height: auto;
+
+    &_box {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 0.5fr);
+        justify-content: space-between;
+        gap: 24px;
+        width: 100%;
+
+        @include media(650px) {
+            grid-template-columns: repeat(1, 100%);
+            grid-template-rows: repeat(3, 0.5fr);
+        }
+    }
+
+    &_card_text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        grid-column: span 1;
+
+        @include media(1000px) {
+            grid-row: span 3;
+        }
+        @include media(650px) {
+            grid-row: span 1;
+        }
+    }
+
+    &_title {
+        font-family: "Golos Text", sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 56px;
+        text-align: left;
+        color: var(--brwn2);
+
+        @include media(1200px) {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        @include media(800px) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    &_text {
+        font-family: "Golos Text", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: #505050;
+
+        @include media(1200px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        @include media(1000px) {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    &_card_icons {
+        display: flex;
+        column-gap: 40px;
+        margin-top: 32px;
+        flex: 2 2 40%;
+        width: 100%;
+
+        @include media(1000px) {
+            grid-column: span 2;
+        }
+
+        @include media(650px) {
+            grid-column: span 1;
+            grid-row: 2;
+        }
+    }
+
+    &_card_icon {
+        display: flex;
+        // flex-direction: column;
+        row-gap: 56px;
+        column-gap: 5%;
+        flex-wrap: wrap;
+        width: 100%;
+        // @include media(1480px) {
+        //     flex-direction: row;
+        // }
+
+        // @include media (1100px) {
+        //     flex-wrap: wrap;
+        // }
+    }
+
+    &_icon_text {
+        // width: 330px;
+        display: flex;
+        align-items: center;
+        font-family: "Golos Text", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        column-gap: 16px;
+        width: 40%;
+
+        @include media(1000px) {
+            width: 30%;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        @include media(800px) {
+            width: 45%;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        @include media(650px) {
+            width: 47.5%;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &_img {
+            width: 80px;
+            height: 100%;
+            color: var(--brwn2);
+            @include media(1400px) {
+                width: 54px;
+                height: 54px;
+            }
+
+            @include media(1200px) {
+                width: 40px;
+                height: 40px;
+            }
+
+            @include media(600px) {
+                width: 48px;
+                height: 48px;
+            }
+
+            &_color {
+                fill: var(--brwn2);
+            }
+            &_color2 {
+                fill: var(--brwn1);
+            }
+        }
+        &_card {
+            width: 80px;
+            height: 80px;
+            @include media(1400px) {
+                width: 54px;
+                height: 54px;
+            }
+
+            @include media(1200px) {
+                width: 40px;
+                height: 40px;
+            }
+
+            @include media(600px) {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+
+    &_card_left {
+        position: relative;
+        grid-row: span 3;
+        max-height: 560px;
+
+        @include media(1000px) {
+            max-height: 400px;
+        }
+
+        @include media(650px) {
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+
+        &_img {
+            object-fit: cover;
+            object-position: top;
+            width: 100%;
+
+            height: 100%;
+            // border-radius: 16px;
+            border-radius:0px 1000px 1000px 0px;
+    
+            display: inline-block;
+
+            // transform: scaleX(-1);
+
+            @include media(1000px) {
+                border-radius:0px 500px 500px 0px;
+
+            }
+
+            @include media(800px) {
+                border-radius:200px 0px 0px 200px;
+
+            }
+
+            @include media(650px) {
+                border-radius:12px 160px 160px 12px;
+
+            }
+        }
+    }
+
+    &_map_text {
+        padding: 40px 56px;
+        background: white;
+        position: absolute;
+        box-shadow: 0px 3px 65px 0px var(--brwn1);
+        
+        left: 8%;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+        bottom: -50px;
+        width: 80%;
+
+        @include media(1538px) {
+            padding: 30px 46px;
+        }
+
+        @include media(1490px) {
+            padding: 20px 36px;
+        }
+
+        @include media(1250px) {
+            padding: 16px;
+        }
+
+        @include media(800px) {
+            bottom: -35px;
+            box-shadow: 0px 3px 35px 0px var(--brwn1);
+
+        }
+
+        @include media(650px) {
+            width: 100.2%;
+            left: -1px;
+            box-shadow: 0px 1px 15px 0px var(--brwn1);
+
+        }
+        &_box {
+            width: 50px;
+            height: 50px;
+            @include media(1000px) {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        &_img {
+            width: 50px;
+            height: 100%;
+            padding: 10px;
+            background: var(--brwn3);
+            border-radius: 16px;
+            @include media(1000px) {
+                width: 45px;
+                height: 45px;
+            }
+
+            @include media(600px) {
+                padding: 12px;
+            }
+
+            &_color{
+                stroke: #794F47;
+            }
+        }
+
+        &_text {
+            font-family: "Golos Text", sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: left;
+            color: #794F47;
+
+            @include media(1538px) {
+                font-size: 22px;
+            }
+
+            @include media(1450px) {
+                font-size: 20px;
+            }
+
+            @include media(1250px) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            @include media(850px) {
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+
+        &_text2 {
+            font-family: "Golos Text", sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 32px;
+            text-align: left;
+            color: #794F47;
+
+            @include media(800px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .about2 {
+        display: none;
+    }
+}

@@ -1,0 +1,79 @@
+@import './mixins.scss';
+@import '../../Components/Nav/Nav.scss',
+'../../Components/Upcoming/Upcoming.scss',
+'../../Components/About/About.scss',
+'../../Components/Location/Location.scss',
+'../../Components/Footer/Footer.scss',
+'../../Components/Send_form/Send_form.scss',
+'../../Components/Construction/Construction.scss',
+'../../Components/Company/Company.scss',
+'../../Components/Blocks_location/Blocks_location.scss',
+'../../Components/Block_average/Block_average.scss',
+'../../Components/Houses_plan/Houses_plan.scss',
+'../../Components/Loading/Loading.scss';
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+
+:root{
+  --brwn1:#B2867D;
+  --brwn2:#704742;
+  --brwn3:#FAEBDD;
+  --brwn4:#794F47;
+  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Golos Text', sans-serif;
+}
+
+body {
+  // background: #384D8B;
+  background: white;
+
+}
+
+@media (min-width: 1000px) and (max-width: 1600px) {
+  body {
+    transform: scale(0.8);
+    transform-origin: top left;
+    width: 125%;
+    height: 100vh;
+    overflow-x: hidden;
+    background: white;
+
+  }
+}
+
+.container {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.container2 {
+  width: 100%;
+
+  @include media (1200px) {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+.about,
+.average,
+.blocks_location,
+.company,
+.construction,
+.houses,
+.location,
+.form {
+  margin-top: 90px;
+
+  @include media (1000px) {
+    margin-top: 50px;
+  }
+
+  @include media (600px) {
+    margin-top: 16px;
+  }
+
+}
