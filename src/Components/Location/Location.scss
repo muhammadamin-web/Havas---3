@@ -45,7 +45,7 @@
         object-position: top;
         border-radius: 16px;
         // border-top-right-radius: 280px;
-        transform: scaleX(-1);
+        transform: scaleX(1);
 
         @include media(1000px) {
             // border-top-right-radius: 200px;

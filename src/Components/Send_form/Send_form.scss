@@ -32,8 +32,8 @@
 
     &_card_right {
         width: 55%;
-        background-color: var(--brwn2);
-        color: white;
+        background-color: white;
+        color: black;
         @include media(1200px) {
             width: 100%;
         }
@@ -132,7 +132,7 @@ outline: none;
         font-weight: 400;
         font-size: 18px;
         line-height: 24px;
-        color: white;
+        color: black;
 
         @include media(1000px) {
             font-size: 16px;
@@ -161,11 +161,11 @@ outline: none;
     }
 
     button {
-        background-color: var(--brwn3);
+        background-color: var(--brwn2);
         padding: 12px 32px;
         border-radius: 32px;
         border: 0;
-        color: black !important;
+        color: white !important;
         margin-top: 48px;
         cursor: pointer;
 

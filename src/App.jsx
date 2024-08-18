@@ -8,7 +8,7 @@ import Nav from "./Components/Nav/Nav";
 import Upcoming from "./Components/Upcoming/Upcoming";
 import img1 from "./assets/images/3.jpg";
 import img2 from "./assets/images/5.jpg";
-import img3 from "./assets/images/intro3.jpeg";
+import img3 from "./assets/images/1.jpg";
 import Send_form from "./Components/Send_form/Send_form";
 import Block_average from "./Components/Block_average/Block_average";
 import Houses_plan from "./Components/Houses_plan/Houses_plan";

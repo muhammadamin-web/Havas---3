@@ -126,7 +126,7 @@
         display: flex;
         column-gap: 40px;
         margin-top: 32px;
-        width: 90%;
+        width: 95%;
 
         @include media(1200px) {
             grid-column: span 1;

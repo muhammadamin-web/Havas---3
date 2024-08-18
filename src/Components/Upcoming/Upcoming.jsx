@@ -53,12 +53,10 @@ const Upcoming = ({ images }) => {
                           className="slidet_text"
                           key={`navimage${index + 1}`}
                         >
-                          Baxtli hayot maskaniga xush kelibsiz!
+                          Samarqanddagi birinchi premium toifadagi turar-joy majmuasi
                         </h3>
                         <p className="slidet_text2">
-                          NRG JOMIY - NRGning yangi biznes-klass turarjoy
-                          majmuasi, mashhur ortaosiyolik shoir Abdurahmon Jomiy
-                          sharafiga atalgan.
+                          Havas Premium — TXT Group kompaniyasi tomonidan Samarqand shahrida barpo etilayotgan ko’p qavatli turar-joy majmuasidir.
                         </p>
                       </div>
                       <div className="upcoming_icon2_card">
