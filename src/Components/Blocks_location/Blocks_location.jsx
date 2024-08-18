@@ -61,6 +61,7 @@ const Blocks_location = () => {
                     </defs>
                   </svg>
                 </div>
+                
                 Ventilyatsiya qurilmasiga ega fasad
               </div>
               <div className="blocks_location_icon_text">
