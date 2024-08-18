@@ -1,5 +1,6 @@
 .about {
     height: auto;
+    overflow: hidden;
 
     &_box {
         display: grid;
@@ -223,7 +224,7 @@
         padding: 40px 56px;
         background: white;
         position: absolute;
-        box-shadow: 0px 3px 65px 0px var(--brwn1);
+        box-shadow: 0px 3px 65px 0px #0000001a;
         
         left: 8%;
         border-radius: 16px;
@@ -248,14 +249,14 @@
 
         @include media(800px) {
             bottom: -35px;
-            box-shadow: 0px 3px 35px 0px var(--brwn1);
+            box-shadow: 0px 3px 35px 0px;
 
         }
 
         @include media(650px) {
             width: 100.2%;
             left: -1px;
-            box-shadow: 0px 1px 15px 0px var(--brwn1);
+            box-shadow: 0px 1px 15px 0px ;
 
         }
         &_box {
@@ -282,7 +283,7 @@
             }
 
             &_color{
-                stroke: #794F47;
+                stroke: black;
             }
         }
 
@@ -292,7 +293,7 @@
             font-weight: 400;
             line-height: 32px;
             text-align: left;
-            color: #794F47;
+            color: black;
 
             @include media(1538px) {
                 font-size: 22px;
@@ -319,7 +320,7 @@
             font-weight: 600;
             line-height: 32px;
             text-align: left;
-            color: #794F47;
+            color: black;
 
             @include media(800px) {
                 font-size: 14px;

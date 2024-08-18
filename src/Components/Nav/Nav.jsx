@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.svg";
 import { PiPhoneCallLight } from "react-icons/pi";
 import { RxDownload } from "react-icons/rx";
 import { IoMenu } from "react-icons/io5";

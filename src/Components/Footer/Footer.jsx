@@ -6,7 +6,6 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
 
-
 const Footer = () => {
   return (
     <footer className="footer">
@@ -43,30 +42,48 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer_icons">
-                <a href="https://www.facebook.com/txtgroup.uzb" className="footer_icon">
-                  <FaFacebookF />
-                </a>
-                <a href="https://www.instagram.com/txtgroup.uzb" className="footer_icon">
-                  <FaInstagram />
-                </a>
-                <a href="https://t.me/txtgroupuzb" className="footer_icon">
-                  <FaTelegramPlane />
-                </a>
-                <a href="#!" className="footer_icon">
-                  <FaYoutube />
-                </a>
-              </div>
+              <a
+                href="https://www.facebook.com/txtgroup.uzb"
+                className="footer_icon"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://www.instagram.com/txtgroup.uzb"
+                className="footer_icon"
+              >
+                <FaInstagram />
+              </a>
+              <a href="https://t.me/txtgroupuzb" className="footer_icon">
+                <FaTelegramPlane />
+              </a>
+              <a href="#!" className="footer_icon">
+                <FaYoutube />
+              </a>
+            </div>
           </div>
           <div className="footer_card2">
             <div>
-            <iframe className="map_container" src="https://yandex.com/map-widget/v1/?um=constructor%3A99b8ce0cf880c0febd025474bc3ea144143cafa50311dc7592b79639c435804b&amp;source=constructor" width="831" height="578" frameborder="0"></iframe>
+              <iframe
+                className="map_container"
+                src="https://yandex.com/map-widget/v1/?um=constructor%3A99b8ce0cf880c0febd025474bc3ea144143cafa50311dc7592b79639c435804b&amp;source=constructor"
+                width="831"
+                height="578"
+                frameborder="0"
+              ></iframe>
             </div>
           </div>
           <div className="footer_card3">
             <p className="footer_card3_text">
-              Ushbu saytdagi suratlar loyiha arxitekturasini tushunish, fasad, dizayn va interer tasvirlari bilan tanishish, majmua infratuzilmasini oʻrganib chiqish maqsadida yuklangan. U ommaviy oferta hisoblanmaydi.
-            </p>  
-          
+              © 2024 TXT Group. Barcha huquqlar himoyalangan. Saytda nashr
+              etilgan har qanday material kompaniya intellektual mulki
+              hisoblanib, foydalanuvchilar bundan xabardor boʻlishi kerak. Ushbu
+              saytdagi rasm va renderlar majmua loyihasi, xonadonlar joylashuvi
+              va hovli maydoni bilan yaqindan tanishish maqsadida yuklangan.
+              Tayyor binolar dizayni va koʻrinishi saytdagi tasvirlardan farq
+              qilishi mumkin. Shu sababli bu maʼlumotlar ommaviy oferta
+              hisoblanmaydi.
+            </p>
           </div>
         </div>
       </div>
