@@ -52,10 +52,10 @@
         justify-content: space-between;
         gap: 5%;
         width: 100%;
-        @include media(1000px) {
-            grid-template-columns: repeat(2, 50%);
-            grid-template-rows: repeat(1, 0.5fr);
-        }
+        // @include media(1000px) {
+        //     grid-template-columns: repeat(2, 50%);
+        //     grid-template-rows: repeat(1, 0.5fr);
+        // }
         @include media(650px) {
             grid-template-columns: repeat(1, 100%);
             grid-template-rows: repeat(3, 0.5fr);
@@ -71,10 +71,10 @@
         // margin-top: 36px;
         width: 90%;
 
-        @include media(1000px) {
-            grid-row: span 1;
-            grid-row-start: 1;
-        }
+        // @include media(1000px) {
+        //     grid-row: span 1;
+        //     grid-row-start: 1;
+        // }
 
         @include media(800px) {
             width: 90%;
@@ -133,12 +133,12 @@
             grid-row: span 1;
             grid-row-start:span 1;
         }
-        @include media(1000px) {
-            grid-column: span 2;
-            width: 100%;
-            grid-row: span 1;
-            grid-row-start:span 1;
-        }
+        // @include media(1000px) {
+        //     grid-column: span 2;
+        //     width: 100%;
+        //     grid-row: span 1;
+        //     grid-row-start:span 1;
+        // }
 
         @include media(650px) {
             margin-top: 0;
@@ -294,7 +294,7 @@
     }
 
     &_map_text {
-        padding: 40px 56px;
+        padding: 40px 16px;
         background: var(--brwn1);
         position: absolute;
         // box-shadow: 0px 12px 26px 0px #0000001a;
@@ -325,10 +325,10 @@
         @include media(1000px) {
             // left: 5%;
             // width: 90%;
-            padding: 20px 36px;
+            padding:  8px 10px 20px 10px;
 
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
         }
         @include media(800px) {
             left: -13px;
@@ -339,14 +339,14 @@
             padding: 8px 14px 20px 14px
             ;
 
-            width: 220px;
-            height: 220px;
+            width: 240px;
+            height: 240px;
         }
 
         @include media(650px) {
             left: 0px;
-            width: 214px;
-            height: 214px;
+            width: 224px;
+            height: 224px;
             bottom: -58px;
             padding: 8px 10px 20px 10px;
             gap: 12px;
