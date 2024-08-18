@@ -10,9 +10,9 @@ import { useEffect } from "react";
 const About = () => {
   useEffect(() => {
     AOS.init({
-      
+
       duration: 1000,
-      once: true, 
+      once: true,
 
     });
   }, []);
@@ -23,17 +23,10 @@ const About = () => {
           <div className="about_card_text" data-aos="fade-right" data-aos-offset="-50">
             <h2 className="about_title">Loyiha haqida</h2>
             <p className="about_text">
-              NRG Qorasuvda hammasi ajoyib! Joylashgan o`rnidan boshlab,
-              xonadonlarni joylashtirish tartibi, xavfsiz hudud va turarjoy
-              majmuasining bolg`usi aholisi uchun parkovkalarning
-              mavjudligigacha puxta o`ylangan.
+              Havas Premium malakali arxitektorlar tomonidan loyihalangan boʻlib, qurilishda yuqori sifatli qurilish materiallaridan foydalanilgan.
             </p>
             <p className="about_text">
-              Yangi turarjoy majmuasining konseptini ishlab chigish davomida,
-              NRG Uzbekistan rivojlantirish jamoasi, binolar, landshaft va
-              xollning zamonaviy dizaynini, majmua ichidagi yashash uchun qulay
-              bo`ladigan shart-sharoitlar bilan uyg`unlashtirishga muvaffaq
-              bo`ldi.
+              Ushbu loyiha qurilishidan oldin uning joylashuvi va atrofdagi infratuzilma sinchkovlik bilan oʻrganilgan.
             </p>
           </div>
 
@@ -50,9 +43,7 @@ const About = () => {
                 </svg>
               </div>
               <p className="about_map_text_text">
-                Hududning o`zgacha bir muhiti, uning tarixiga hurmat bilan
-                munosabatda bolish loyihaning nomini va uning konseptsiyasini
-                belgilab berdi
+                Samarqand markazidagi loyiha oʻzining hashamati bilan ajralib turadi. Unda rezidentlar oʻzini shahar hayotining ajralmas qismi sifatida tasavvur qiladi.
               </p>
               <p className="about_map_text_text2">Xaritada ko‘rish</p>
             </div>

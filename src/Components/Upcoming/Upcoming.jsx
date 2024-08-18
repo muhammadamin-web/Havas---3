@@ -7,13 +7,22 @@ import { Link } from "react-scroll";
 
 const Upcoming = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [zoom, setZoom] = useState(true);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setZoom(true);
+    setTimeout(() => {
+      setZoom(false);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setZoom(true);
+      }, 3000);
+    }, 3000);
   };
 
   useEffect(() => {
-    const autoSlider = setInterval(nextSlide, 10000);
+    nextSlide();
+    const autoSlider = setInterval(nextSlide, 6000);
     return () => clearInterval(autoSlider);
   }, []);
 
@@ -28,7 +37,10 @@ const Upcoming = ({ images }) => {
                   }`}
                 key={index}
               >
-                <img src={src} alt="" className="" />
+                <img src={src} alt="" className="" style={{
+                  transform: index === currentIndex && zoom ? 'scale(1.1)' : 'scale(1)',
+                  transition: 'transform 3s' // Transform har doim 3 sekund davomida bo'ladi
+                }} />
                 <div className=" img_text ">
                   <div className="container">
                     <div className="upcoming_box">
@@ -37,12 +49,10 @@ const Upcoming = ({ images }) => {
                           className="slidet_text"
                           key={`navimage${index + 1}`}
                         >
-                          Baxtli hayot maskaniga xush kelibsiz!
+                          Samarqanddagi birinchi premium toifadagi turar-joy majmuasi
                         </h3>
                         <p className="slidet_text2">
-                          NRG JOMIY - NRGning yangi biznes-klass turarjoy
-                          majmuasi, mashhur ortaosiyolik shoir Abdurahmon Jomiy
-                          sharafiga atalgan.
+                          Havas Premium — TXT Group kompaniyasi tomonidan Samarqand shahrida barpo etilayotgan ko’p qavatli turar-joy majmuasidir.
                         </p>
                       </div>
                       <div className="upcoming_icon2_card">

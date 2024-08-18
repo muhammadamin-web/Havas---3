@@ -19,14 +19,14 @@ const Blocks_location = () => {
               <div className="blocks_location_map_text_box">
 
                 <svg className="blocks_location_map_text_img" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path className="blocks_location_map_text_img_color" d="M16.6665 19.3506V25.3332C16.6665 25.7012 16.9518 25.9999 17.3052 25.9999H24.0292C24.3812 25.9999 24.6665 25.7012 24.6665 25.3332V19.3146"  stroke-width="2.3994" stroke-linecap="round" stroke-linejoin="round" />
-                  <path className="blocks_location_map_text_img_color" d="M15.334 20.2227L20.7767 16.6667L26.0007 20.2227"  stroke-width="2.3994" stroke-linecap="round" stroke-linejoin="round" />
-                  <path className="blocks_location_map_text_img_color" fill-rule="evenodd" clip-rule="evenodd" d="M11.941 15.1559C13.7695 15.1559 15.2517 13.6737 15.2517 11.8453C15.2517 10.0168 13.7695 8.53461 11.941 8.53461C10.1126 8.53461 8.63037 10.0168 8.63037 11.8453C8.63037 13.6737 10.1126 15.1559 11.941 15.1559Z"  stroke-width="2.3994" stroke-linecap="round" stroke-linejoin="round" />
-                  <path className="blocks_location_map_text_img_color" d="M21.852 12.5653C22.0253 9.8173 21.0707 7.01197 18.9707 4.91197C15.088 1.0293 8.79467 1.0293 4.912 4.91197C1.02933 8.79464 1.02933 15.088 4.912 18.9706L11.9413 26"  stroke-width="2.3994" stroke-linecap="round" stroke-linejoin="round" />
+                  <path className="blocks_location_map_text_img_color" d="M16.6665 19.3506V25.3332C16.6665 25.7012 16.9518 25.9999 17.3052 25.9999H24.0292C24.3812 25.9999 24.6665 25.7012 24.6665 25.3332V19.3146" stroke-width="2.3994" stroke-linecap="round" stroke-linejoin="round" />
+                  <path className="blocks_location_map_text_img_color" d="M15.334 20.2227L20.7767 16.6667L26.0007 20.2227" stroke-width="2.3994" stroke-linecap="round" stroke-linejoin="round" />
+                  <path className="blocks_location_map_text_img_color" fill-rule="evenodd" clip-rule="evenodd" d="M11.941 15.1559C13.7695 15.1559 15.2517 13.6737 15.2517 11.8453C15.2517 10.0168 13.7695 8.53461 11.941 8.53461C10.1126 8.53461 8.63037 10.0168 8.63037 11.8453C8.63037 13.6737 10.1126 15.1559 11.941 15.1559Z" stroke-width="2.3994" stroke-linecap="round" stroke-linejoin="round" />
+                  <path className="blocks_location_map_text_img_color" d="M21.852 12.5653C22.0253 9.8173 21.0707 7.01197 18.9707 4.91197C15.088 1.0293 8.79467 1.0293 4.912 4.91197C1.02933 8.79464 1.02933 15.088 4.912 18.9706L11.9413 26" stroke-width="2.3994" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
               <p className="blocks_location_map_text_text">
-                NRG Qorasuv - bu Yevropa va Sharq uslublarini birgalikda qollash orqali ishlab chigilgan eksklyuziv mualliflik dizayni.
+                Havas Premium — zamonaviy va milliy uslubni birlashtirgan holda Samarqandda qurilayotgan yangi uslubdagi turar-joy majmuasi.
               </p>
               {/* <p className="blocks_location_map_text_text2">Xaritada ko‘rish</p> */}
             </div>
@@ -35,15 +35,14 @@ const Blocks_location = () => {
           <div className="blocks_location_card_text">
             <h2 className="blocks_location_title">Majmua arxitekturasi</h2>
             <p className="blocks_location_text blocks_location_text_1">
-              Majmua mutlaq xavfsiz va erkin hudud sifatida chuqur o'ylangan.
-              Hech ganday begona kishilar va chagirilmagan mehmonlar.
+              Turar-joy majmuasi toʻliq xavfsiz va erkin harakatlanish mumkin boʻlgan hududda joylashgan. Hovli begonalar kira olmaydi.
             </p>
-            <p className="blocks_location_text">
+            {/* <p className="blocks_location_text">
               Hovlilarda avtomashina bo'lmaydi. Ishga mahorat ila yondashuv,
               barcha tafsilotlarga e tiborli bo'lish va qurilish
               materiallarining maxsus tanlovi mualliflar g'oyalarining amalga
               oshishi uchun ishonchli kafolatdir.
-            </p>
+            </p> */}
           </div>
 
           <div className="blocks_location_card_icons">
