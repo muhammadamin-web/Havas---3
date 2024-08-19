@@ -114,9 +114,8 @@
 
         }
     }
-
     img {
-
+        width:200%;
         @include media (1400px) {
             width: 500px;
         }

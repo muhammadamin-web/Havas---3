@@ -5,6 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
+import { FiClock } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
             <h2 className="footer_title">Bog‘lanish</h2>
             <div className="footer_location">
               <div className="footer_location_title">
-                <MdOutlineLocationOn className="footer_location_icon" />
+                <FiClock className="footer_location_icon" />
                 Ish vaqti{" "}
               </div>
               <p className="footer_location_text">
@@ -28,8 +29,8 @@ const Footer = () => {
                 Sotuv ofisi{" "}
               </div>
               <p className="footer_location_text">
-                Toshkent shahri, Mirobod tumani, Oybek ko‘chasi 38а, Biznes
-                center "Avalon", 1 qavat
+              Samarqand viloyati Samarqand shahri 
+              Mirzo Ulugʻbek koʻchasi 71-uy
               </p>
             </div>
             <div className="footer_social">

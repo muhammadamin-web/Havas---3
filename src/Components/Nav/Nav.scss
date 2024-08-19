@@ -291,13 +291,13 @@
         }
         &_card {
             padding: 8px 16px;
-            background: var(--brwn1);
+            background: white;
             border-radius: 8px;
         }
 
         &_icon {
             font-size: 25px;
-            color: white;
+            color: var(--brwn2);
         }
     }
 

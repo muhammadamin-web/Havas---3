@@ -53,31 +53,28 @@ const Company = () => {
         <div className="company_box">
         <div className="company_card_img">
             <img src={universal} alt="" className="company_img" />
-            <div className="company_img_bg">
+            {/* <div className="company_img_bg">
               <img src={logo} alt="" />
-            </div>
+            </div> */}
           </div>
           <div className="company_card">
             <div className="company_card_top">
               <h2 className="company_title">Quruvchi kompaniya to‘g‘risida</h2>
               <p className="company_text">
-                Sizning uyingizda hozirdan baxtli oilalar yashamogdalar,
-                bolajonlar birinchi do'stlarini topmoqdalar va do stona
-                qo'shnichilik madaniyati gullab-yashnamoqda.
+              TXT Group yirik va zamonaviy qurilish kompaniyasi boʻlib, Oʻzbekistonning 10 dan ortiq tuman va shaharlarida turar-joy majmualari barpo etgan. Kompaniya 2014-yilda tashkil etilgan va shu vaqt ichida ishonchli hamda samarali hamkor sifatida tanilgan.
               </p>
               <p className="company_text">
-                NRG - O'zbekiston va Qozog'iston qardosh xalqlarining do'stligi
-                va madaniy birligining, hamfikrlilik ittifogining yaggol
-                tasdig'idir. Biz o'zbek xalgining ko'p asrlik eng zo'r me'moriy
-                ananalari bilan Qozog'istonning ilg'or qurilish tajribasini
-                mujassamlashtirmoqdamiz.
+              
+Har bir loyiha biz uchun nafaqat biznes, balki oʻz mijozlarimizga eng yaxshi yashash sharoitlarini taqdim etish imkoniyatidir. Bizning asosiy missiyamiz mustahkam va qulay uy-joylar qurish orqali xalqimizning farovonligini taʼminlashdir.
               </p>
               <p className="company_text">
-                Biz hayot uchun qulay makon barpo etmoqdamiz, 24/7 sifatli
-                servis va maishiy masalalarda kafolatlangan yordam taqdim etamiz
+              Kompaniyamiz sifat, mustahkamlik va zamonaviy yondashuvlar asosida eng yuqori darajadagi qurilish xizmatlarini taqdim etishni oʻz oldiga maqsad qilgan. Har bir loyiha biz uchun oʻziga xosdir, shuning uchun biz nafaqat texnik koʻrsatkichlarga, balki mijozlarimizning istak va ehtiyojlariga ham katta eʼtibor qaratamiz.
               </p>
+              <p className="company_text">
+              Biz bilan hamkorlik qilib, siz barqaror va mustahkam qurilish yechimlarini tanlaysiz. Biz sizning ishonchingizni oqlash va orzularingizdagi loyihani hayotga tatbiq etish uchun doim harakatdamiz!              </p>
             </div>
-            <div className="company_card_bottom" ref={sectionRef}>
+            
+            {/* <div className="company_card_bottom" ref={sectionRef}>
               <div className="company_card_bottom_numbers">
                 <h3> + {number1.toLocaleString()}</h3>
                 <p>
@@ -92,7 +89,7 @@ const Company = () => {
                   Xonadonlar qurib bitkazilib <br /> o‘z egalariga topshirildi
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
 
         </div>

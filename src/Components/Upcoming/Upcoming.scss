@@ -87,11 +87,11 @@
 }
 
 .slidet_text {
-    max-width: 900px;
+    // max-width: 900px;
     width: 100%;
 
     @include media (1550px) {
-        max-width: 800px;
+        // max-width: 800px;
 
     }
 
@@ -155,7 +155,7 @@
     font-weight: 400;
     line-height: 32px;
     text-align: left;
-    max-width: 754px;
+    max-width: 994px;
     width: 100%;
     margin-top: 15px;
 
@@ -230,7 +230,7 @@
     }
 
     &_card {
-        width: 70%;
+        width: 80%;
 
         @media (max-width:550px) {
             margin-right: 5%;

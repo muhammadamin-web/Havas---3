@@ -1,4 +1,3 @@
-
 .blocks_location {
     margin-bottom: 100px;
     height: auto;
@@ -117,7 +116,7 @@
         @include media(1200px) {
             font-size: 16px;
         }
-        &_1{
+        &_1 {
             margin-top: 8px;
         }
     }
@@ -131,7 +130,7 @@
         @include media(1200px) {
             grid-column: span 1;
             grid-row: span 1;
-            grid-row-start:span 1;
+            grid-row-start: span 1;
         }
         // @include media(1000px) {
         //     grid-column: span 2;
@@ -149,15 +148,16 @@
         display: flex;
         // flex-direction: column;
         row-gap: 56px;
-        // column-gap: 5%;
+        column-gap: 12%;
         justify-content: space-between;
         flex-wrap: wrap;
+        width: 100%;
 
         @include media(1480px) {
             flex-direction: row;
             // column-gap: 0;
         }
- 
+
         @include media(800px) {
             margin-top: 16px;
         }
@@ -172,7 +172,7 @@
     }
 
     &_icon_text:nth-of-type(3) {
-        width: 35%;
+        width: 30%;
 
         @include media(1200px) {
             width: 30%;
@@ -193,7 +193,7 @@
         line-height: 32px;
         row-gap: 16px;
         flex-direction: column;
-        width: 27.5%;
+        width: 23%;
 
         @include media(1400px) {
             // width: 30%;
@@ -202,7 +202,7 @@
         }
 
         @include media(1200px) {
-            width: 30%;
+            // width: 30%;
             font-size: 18px;
             line-height: 24px;
         }
@@ -253,7 +253,6 @@
         position: relative;
         grid-row: span 3;
         grid-column: 2;
-
         max-height: 560px;
 
         @include media(1200px) {
@@ -268,34 +267,38 @@
             margin-bottom: 50px;
             grid-column: span 1;
         }
+        &_box {
+overflow: hidden;
+width: 100%;
+height: 100%;
+            &_img {
+                object-fit: cover;
+                object-position:top;
+                width: 100%;
+                height: 100%;
+                // transform: scale(2);
 
-        &_img {
-            object-fit: cover;
-            object-position: top;
-            width: 100%;
-
-            height: 100%;
-            border-radius: 24px;
-            // border-top-right-radius: 280px;
-            display: inline-block;
-
-         
-
-            @include media(800px) {
-                // border-top-right-radius: 150px;
-            }
-
-            @include media(650px) {
-                border-radius: 12px 160px 160px 12px;
-                
-                height: 250px;
+                border-radius: 24px;
+                // border-top-right-radius: 280px;
+                display: inline-block;
+    
+                @include media(800px) {
+                    // border-top-right-radius: 150px;
+                }
+    
+                @include media(650px) {
+                    border-radius: 12px 160px 160px 12px;
+    
+                    height: 250px;
+                }
             }
         }
+      
     }
 
     &_map_text {
         padding: 40px 16px;
-        background: var(--brwn1);
+        background: var(--brwn2);
         position: absolute;
         // box-shadow: 0px 12px 26px 0px #0000001a;
         left: -54px;
@@ -303,15 +306,13 @@
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: 16px;
+        gap: 39px;
         bottom: -50px;
         color: white;
         width: 374px;
         height: 374px;
         align-items: center;
         border: 8px solid white;
-
-
 
         @include media(1490px) {
             padding: 40px 36px;
@@ -325,10 +326,10 @@
         @include media(1000px) {
             // left: 5%;
             // width: 90%;
-            padding:  8px 10px 20px 10px;
+            padding: 8px 10px 20px 10px;
 
-            width: 250px;
-            height: 250px;
+            width: 270px;
+            height: 270px;
         }
         @include media(800px) {
             left: -13px;
@@ -336,8 +337,7 @@
             width: 204px;
             height: 204px;
             bottom: -70px;
-            padding: 8px 14px 20px 14px
-            ;
+            padding: 8px 14px 20px 14px;
 
             width: 240px;
             height: 240px;
@@ -350,7 +350,7 @@
             bottom: -58px;
             padding: 8px 10px 20px 10px;
             gap: 12px;
-            
+
             // border-radius: 8px;
         }
         &_box {

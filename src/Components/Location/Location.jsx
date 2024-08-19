@@ -27,10 +27,16 @@ const Location = () => {
               Majmua yuqori sifatli qurilish materiallaridan tajribali quruvchilar tomonidan barpo etilmoqda. Hovlida bolalar maydonchasi, savdo doʻkonlari, dorixona va goʻzallik salonlari boʻladi.
 
             </p>
+            <p className="location_text">
+            Bu yerda yashash ajoyib, biznes bilan shug'ullanish esa qulay.
+            Transport infratuzilmasi shaharning istalgan nuqtasiga oson yetib borish imkonini beradi: siz faqat istagan va zarur yo'nalishingizni tanlasangiz kifoya.
+            </p>
           </div>
           <div className="location_card2" data-aos="fade-left" data-aos-offset="-200">
             <p className="location_text2">
-              <span>Havas Premium</span> — bu ideal hayot tarzini qurish va yangi tanishlar orttirish uchun qulay manzil. U yerda barcha oʻziga kerakli muhitni yarata oladi.
+              <span>Havas Premium</span> Siz va oilangiz uchun zarur boʻlgan barcha qulayliklarni 
+oʻzida jamlagan, shaharning yangi markaziga aylanadigan turar-joy 
+majmuasi!
             </p>
           </div>
         </div>

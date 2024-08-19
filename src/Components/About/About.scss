@@ -235,7 +235,7 @@
         padding: 40px 56px;
         background: white;
         position: absolute;
-        box-shadow: 0px 3px 65px 0px #0000001a;
+        box-shadow: 0px 3px 65px 0px #EAFFFC;
         
         left: 8%;
         border-radius: 16px;
@@ -282,7 +282,8 @@
             width: 50px;
             height: 100%;
             padding: 10px;
-            background: var(--brwn3);
+            stroke: white;
+            background: var(--brwn2);
             border-radius: 16px;
             @include media(1000px) {
                 width: 45px;
@@ -294,7 +295,7 @@
             }
 
             &_color{
-                stroke: black;
+                stroke: white;
             }
         }
 
@@ -304,7 +305,7 @@
             font-weight: 400;
             line-height: 32px;
             text-align: left;
-            color: black;
+            color: var(--brwn2);
 
             @include media(1538px) {
                 font-size: 22px;
@@ -331,7 +332,7 @@
             font-weight: 600;
             line-height: 32px;
             text-align: left;
-            color: black;
+            color: var(--brwn2);
 
             @include media(800px) {
                 font-size: 14px;

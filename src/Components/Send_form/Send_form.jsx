@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
-import form from "../../assets/images/4.jpg";
+import form from "../../assets/images/form.png";
 
 
 const Send_form = () => {
@@ -108,7 +108,7 @@ const Send_form = () => {
                 Shaxsiy maʼlumotlarim qayta ishlanishiga roziman                </p>
               </div>
               <button className="name_text" onClick={handleSubmit}>
-              Yuborish
+              Jo‘natish
               </button>
             </div>
           </div>
