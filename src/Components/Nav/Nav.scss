@@ -43,8 +43,9 @@
     &_txt {
         width: 100px;
         position: absolute;
-        right: 0px;
+        right: 5%;
         bottom: -120px;
+        z-index: -1;
 
         @include media (1410px) {
             width: 80px;
@@ -91,9 +92,10 @@
         align-items: center;
         // position: relative;
    &_container {
-            display: flex;
+            // display: flex;
             flex-direction: column;
-            position: relative;
+            // position: relative;
+            
         }
 
     }
