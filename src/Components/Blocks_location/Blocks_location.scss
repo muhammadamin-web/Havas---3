@@ -360,6 +360,10 @@
                 width: 45px;
                 height: 45px;
             }
+            @include media(1000px) {
+                width: 32px;
+                height: 32px;
+            }
         }
         &_img {
             width: 50px;
