@@ -1,3 +1,4 @@
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import About from "./Components/About/About";
 import Company from "./Components/Company/Company";
 import Construction from "./Components/Construction/Construction";
@@ -11,13 +12,13 @@ import img2 from "./assets/images/5.jpg";
 import img3 from "./assets/images/1.jpg";
 import Send_form from "./Components/Send_form/Send_form";
 import Block_average from "./Components/Block_average/Block_average";
-import Houses_plan from "./Components/Houses_plan/Houses_plan";
-import { useEffect, useState } from "react";
 import Loading from "./Components/Loading/Loading";
+
+// Houses_plan komponentini lazy loading bilan kechiktirib yuklash
+const Houses_plan = lazy(() => import("./Components/Houses_plan/Houses_plan"));
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-
 
   useEffect(() => {
     const handlePageLoad = () => {
@@ -42,7 +43,9 @@ const App = () => {
 
     return () => window.removeEventListener('load', handlePageLoad);
   }, []);
+
   const images = [img1, img2, img3];
+
   return (
     <>
       {isLoading ? (
@@ -55,7 +58,12 @@ const App = () => {
           <Location />
           <Block_average />
           <Blocks_location />
-          <Houses_plan />
+          
+          {/* Suspense bilan kechiktirilgan yuklashni qo'llash */}
+          <Suspense fallback={<div>Loading Houses Plan...</div>}>
+            <Houses_plan />
+          </Suspense>
+          
           <Send_form />
           <Construction />
           <Company />

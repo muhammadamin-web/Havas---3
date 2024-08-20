@@ -5,10 +5,10 @@ import { CiGlobe } from "react-icons/ci";
 import { PiPhoneCallLight } from "react-icons/pi";
 import { Link } from "react-scroll";
 
-
 const Upcoming = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [zoom, setZoom] = useState(true);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   const nextSlide = () => {
     setZoom(true); // Zoom-in boshlanadi
@@ -22,10 +22,24 @@ const Upcoming = ({ images }) => {
   };
 
   useEffect(() => {
-    nextSlide(); // Dastlabki renderda birinchi slayd uchun zoom animatsiyasini boshlash
-    const autoSlider = setInterval(nextSlide, 6000); // Har bir slaydda umumiy jarayon 6 sekund davom etadi (3 sekund zoom-in + 3 sekund zoom-out)
-    return () => clearInterval(autoSlider);
+    const handlePageLoad = () => {
+      setIsPageLoaded(true);
+    };
+
+    window.addEventListener("load", handlePageLoad);
+
+    return () => {
+      window.removeEventListener("load", handlePageLoad);
+    };
   }, []);
+
+  useEffect(() => {
+    if (isPageLoaded) {
+      nextSlide(); // Dastlabki renderda birinchi slayd uchun zoom animatsiyasini boshlash
+      const autoSlider = setInterval(nextSlide, 6000); // Har bir slaydda umumiy jarayon 6 sekund davom etadi (3 sekund zoom-in + 3 sekund zoom-out)
+      return () => clearInterval(autoSlider);
+    }
+  }, [isPageLoaded]);
 
   return (
     <div className="main-carousel" id="home">
@@ -63,7 +77,6 @@ const Upcoming = ({ images }) => {
                         <Link to="houses"
                           smooth={true}
                           offset={-50}
-
                           duration={500} href="#!" className="upcoming_icon2">
                           Rejalashtirishni tanlash
                         </Link>
@@ -77,7 +90,6 @@ const Upcoming = ({ images }) => {
                           <Link to="form"
                             smooth={true}
                             offset={-50}
-
                             duration={500} href="#!" className="upcoming_icon">
                             <PiPhoneCallLight className="upcoming_phone" />
                           </Link>
