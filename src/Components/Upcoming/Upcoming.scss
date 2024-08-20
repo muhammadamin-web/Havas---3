@@ -245,12 +245,12 @@
 
         @include media(1300px) {
             flex-direction: column-reverse;
-            width: 30%;
+            width: 20%;
 
         }
 
         @include media(800px) {
-            width: 30%;
+            width: 20%;
             justify-content: flex-end;
         }
 

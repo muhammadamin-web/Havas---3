@@ -68,6 +68,9 @@ body {
 .form {
   margin-top: 90px;
 
+  @include media (1200px) {
+    margin-top: 70px;
+  }
   @include media (1000px) {
     margin-top: 50px;
   }
