@@ -24,6 +24,8 @@
         @include media(650px) {
             grid-template-columns: repeat(1, 100%);
             grid-template-rows: repeat(3, 0.5fr);
+            gap: 18px;
+
         }
     }
 
@@ -93,6 +95,8 @@
         @include media(650px) {
             grid-column: span 1;
             grid-row: 2;
+            margin-top: 0px;
+
         }
     }
 
@@ -107,9 +111,9 @@
         //     flex-direction: row;
         // }
 
-        // @include media (1100px) {
-        //     flex-wrap: wrap;
-        // }
+        @include media (650px) {
+            row-gap: 18px;
+        }
     }
 
     &_icon_text {
