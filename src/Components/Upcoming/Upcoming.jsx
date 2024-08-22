@@ -8,7 +8,6 @@ import { Link } from "react-scroll";
 const Upcoming = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [zoom, setZoom] = useState(true);
-  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   const nextSlide = () => {
     setZoom(true); // Zoom-in boshlanadi
@@ -22,24 +21,10 @@ const Upcoming = ({ images }) => {
   };
 
   useEffect(() => {
-    const handlePageLoad = () => {
-      setIsPageLoaded(true);
-    };
-
-    window.addEventListener("load", handlePageLoad);
-
-    return () => {
-      window.removeEventListener("load", handlePageLoad);
-    };
+    nextSlide(); // Dastlabki renderda birinchi slayd uchun zoom animatsiyasini boshlash
+    const autoSlider = setInterval(nextSlide, 6000); // Har bir slaydda umumiy jarayon 6 sekund davom etadi (3 sekund zoom-in + 3 sekund zoom-out)
+    return () => clearInterval(autoSlider);
   }, []);
-
-  useEffect(() => {
-    if (isPageLoaded) {
-      nextSlide(); // Dastlabki renderda birinchi slayd uchun zoom animatsiyasini boshlash
-      const autoSlider = setInterval(nextSlide, 6000); // Har bir slaydda umumiy jarayon 6 sekund davom etadi (3 sekund zoom-in + 3 sekund zoom-out)
-      return () => clearInterval(autoSlider);
-    }
-  }, [isPageLoaded]);
 
   return (
     <div className="main-carousel" id="home">
@@ -84,7 +69,7 @@ const Upcoming = ({ images }) => {
                       <div className="upcoming_icons">
                         <div className="upcoming_icons_card">
                           <a href="#!" className="upcoming_icon">
-                            Jonli <br /> efir
+                           Live
                           </a>
 
                           <Link to="form"

@@ -2,7 +2,6 @@
 import { useState } from "react";
 import form from "../../assets/images/form.png";
 
-
 const Send_form = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [formData, setFormData] = useState({
@@ -15,7 +14,7 @@ const Send_form = () => {
     const chat_id = "-4226225906"; // Guruh ID sini shu yerda kiritish kerak
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
-    const message = `Ism: ${data.name}\nTel: ${data.tel}`;
+    const message = `#HAVAS\nIsm: ${data.name}\nTel: ${data.tel}`;
 
     try {
       const response = await fetch(url, {
@@ -43,11 +42,25 @@ const Send_form = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!isChecked) {
-      alert('Iltimos, shaxsiy ma\'lumotlarimni qayta ishlashga rozilik bering.');
+      alert("Iltimos, shaxsiy ma'lumotlarimni qayta ishlashga rozilik bering.");
       return;
     }
 
-    const response = await sendToTelegramBot(formData);
+    // Telefon raqamini formatlash
+    const formattedTel = formData.tel.replace(/\D/g, ''); // Faqat raqamlar
+
+    if (!formData.name || formattedTel.length < 9) {
+      alert("Iltimos, barcha maydonlarni to'ldiring va telefon raqamingiz to'g'ri ekanligini tekshiring.");
+      return;
+    }
+
+    if (!isChecked) {
+      alert('Iltimos, shaxsiy ma\'lumotlarimni qayta ishlashga rozilik bering.');
+      return;
+    }
+    const finalTel = `+${formattedTel}`;
+
+    const response = await sendToTelegramBot({ ...formData, tel: finalTel });
     if (response && response.ok) {
       alert("Xabar yuborildi!");
 
@@ -61,6 +74,12 @@ const Send_form = () => {
       alert("Xabar yuborishda xatolik yuz berdi");
     }
   };
+
+  const handleTelInput = (e) => {
+    var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})/);
+    e.target.value = '+' + (x[1] ? x[1] + ' ' : '') + (x[2] ? '(' + x[2] + ')' : '') + (x[3] ? ' ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+    setFormData({ ...formData, tel: e.target.value });
+  };
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="container">
@@ -72,7 +91,8 @@ const Send_form = () => {
             <div className="card_right_box">
               <h3 className="form_title">Mutaxassis bilan suhbat</h3>
               <p className="form_text">
-              Telefon raqamingizni qoldiring, mutaxassislarimiz tez orada siz bilan bogʻlanib, loyiha haqida batafsil maʼlumot berishadi.
+                Aloqa ma’lumotlaringizni qoldiring va menejerimiz loyiha haqida
+                ko’proq qiziqarli ma’lumotlar beradi
               </p>
               <div className="data_box">
                 <div className="data_box_name">
@@ -91,24 +111,35 @@ const Send_form = () => {
                 <div className="data_box_name">
                   <p className="name_text">Telefon</p>
                   <input
-                    type="text"
-                    name="tel"
-                    id="tel"
-                    placeholder="Raqamingizni yozing"
-                    value={formData.tel}
-                    onChange={(e) =>
-                      setFormData({ ...formData, tel: e.target.value })
-                    }
-                  />
+        type="text"
+        name="tel"
+        required
+        id="tel"
+        placeholder="Raqamingizni yozing"
+        value={formData.tel}
+        onChange={handleTelInput}
+      />
+
                 </div>
               </div>
               <div className="form_chekbox">
-                <input type="checkbox" name="" checked={isChecked} id="consent" onChange={(e) => setIsChecked(e.target.checked)}/>
+                <div className="form_chekbox_container">
+                  {" "}
+                  <input
+                    type="checkbox"
+                    name=""
+                    required
+                    checked={isChecked}
+                    id="consent"
+                    onChange={(e) => setIsChecked(e.target.checked)}
+                  />
+                </div>
                 <p className="name_text">
-                Shaxsiy maʼlumotlarim qayta ishlanishiga roziman                </p>
+                  Shaxsiy maʼlumotlarim qayta ishlanishiga roziman{" "}
+                </p>
               </div>
               <button className="name_text" onClick={handleSubmit}>
-              Jo‘natish
+                Jo‘natish
               </button>
             </div>
           </div>
