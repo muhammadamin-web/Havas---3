@@ -23,7 +23,7 @@
         display: block;
         height: 90vh;
         object-fit: cover;
-        object-position: top;
+        object-position: center;
         @include media(550px) {
             height: 400px;
             object-fit: cover;
