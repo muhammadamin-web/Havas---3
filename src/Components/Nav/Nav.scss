@@ -171,9 +171,9 @@
     &_contact {
         display: flex;
         column-gap: 10px;
-        align-items: center;
-
-        &_text {
+        align-items: center;    
+        text-decoration: none;
+        &_text {    
             font-family: "Golos Text", sans-serif;
             font-size: 24px;
             font-weight: 600;

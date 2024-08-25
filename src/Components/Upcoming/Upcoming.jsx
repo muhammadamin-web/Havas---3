@@ -12,7 +12,7 @@ const Upcoming = ({ images }) => {
   const nextSlide = () => {
     setZoom(true); // Zoom-in boshlanadi
     setTimeout(() => {
-      setZoom(false); // 3 sekunddan keyin zoom-out boshlanadi
+      setZoom(false); // 3 sekunddan keyin` zoom-out boshlanadi
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Zoom-out tugagach keyingi slaydga o'tish
         setZoom(true); // Keyingi slayd uchun zoom-in boshlanadi
