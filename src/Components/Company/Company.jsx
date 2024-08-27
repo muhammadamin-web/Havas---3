@@ -87,6 +87,9 @@ const Company = () => {
                 orzularingizdagi loyihani hayotga tatbiq etish uchun doim
                 harakatdamiz!{" "}
               </p>
+              <p className="company_text">
+                <a href="https://www.txt.group/">www.txt.group</a> saytiga tashrif buyurib, kompaniya faoliyati haqida batafsil maʼlumot olishingiz mumkin.
+              </p>
             </div>
 
             {/* <div className="company_card_bottom" ref={sectionRef}>
