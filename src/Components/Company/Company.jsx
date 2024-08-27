@@ -63,7 +63,7 @@ const Company = () => {
                 Xurshid Turayev boshchiligidagi TXT Group yirik va zamonaviy
                 qurilish kompaniyasi boʻlib, Oʻzbekistonning 10 dan ortiq tuman
                 va shaharlarida turar-joy majmualari barpo etgan. Kompaniya
-                2014-yilda tashkil etilgan va shu vaqt ichida ishonchli hamda
+                2011-yilda tashkil etilgan va shu vaqt ichida ishonchli hamda
                 samarali hamkor sifatida tanilgan.
               </p>
               <p className="company_text">

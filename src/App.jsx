@@ -8,7 +8,7 @@ import Nav from "./Components/Nav/Nav";
 import Upcoming from "./Components/Upcoming/Upcoming";
 import img1 from "./assets/images/3.jpg";
 import img2 from "./assets/images/5.jpg";
-import img3 from "./assets/images/1.jpg";
+import img3 from "./assets/images/1.1.jpg";
 import banner1 from "./assets/images/banner1.png";
 import banner2 from "./assets/images/banner2.png";
 import banner3 from "./assets/images/banner3.jpg";
